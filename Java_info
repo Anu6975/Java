@@ -1,0 +1,53 @@
+** What is Java? **
+	-> Java is a object oriented language , developed by james gosling under sun microsystems in 1995. Its first version was released in 1996 - JDK 1.0.
+	-> Later the Java was taken over by Oracle.
+
+** Features of Java **
+	-> Simple and Easy to Understand
+	-> Object Oriented - Java is not Fully OOP Language, because it supports the premitive datatype
+	-> Secured         - Since java does not support pointer concept, has encapsulation, abstraction etc.
+	-> Scalable
+	-> Multi-threading 
+	-> Platform Independent - Why?? 
+	-> Portable
+	-> Robust
+	
+** Why Java is popular?   ** 
+** What is Project ?      **
+** What is Class Loader?  **
+** Execution Flow of Java ** 
+
+** JDK vs JRE vs JVM **
+	-> JDK- Java Development Kit which includes all the libraries, and development tools
+	-> JRE- Java Real-time Environment , it loads the classes for execution
+	-> JVM- Java Virtual MAchine , Performs main execution of java code, it helps in garbage collection, etc. like taks
+	
+	** Diagram ** 
+
+
+** Package **
+	-> Collection of Classes
+
+** Java Syntax **
+	!. Printing Method in java
+		-> system.out.println("Hello!");
+			-where system is class, out is object and print is method
+			
+	2. public static void main( String []args)
+		-> public - access modifier
+		-> static is a keyword for memory allocation
+		-> void does not have return value
+		-> main is a method
+		-> string []args contains string arguments
+		
+
+** Operators **
+
+	1. Arithmetic Operators: +, -, *, /, %, ++, --
+	2. Comparison Operators: ==, >=, <=, >, <, !=
+	3. Logical Operators   : &&, ||
+	4. Assignment Operator : =, +=, -=, *=, /=
+	
+
+	
+**	Task : Registration Form **
