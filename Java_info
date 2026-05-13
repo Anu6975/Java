@@ -48,6 +48,35 @@
 	3. Logical Operators   : &&, ||
 	4. Assignment Operator : =, +=, -=, *=, /=
 	
+** Variable **
+
+	-> Container to store values
+	-> memory allocation name
+	-> syntax: datatype variable_name = value;
+			   Ex. int a = 78;
+	-> Rules: 1. Can't start with numbers, symbols, 
+			  2. can't contain spaces, 
+			  3. Can't contain reserve keyword
+	
 
 	
-**	Task : Registration Form **
+** Scanner Class **
+
+	-> Scanner is used for the taking the user inputs
+	-> Syntax: Scanner reference_variable name = new Scanner(System.in); 
+			   where Scanner is a predefined class, new is to create new object , system.in is used to take input from user
+			   
+** Data-Types **
+
+	-> 2 types of data-types : 1. Primitive Data-Type 2. Non-Primitive Data-Type
+			1. Primitive Data-Type: 	int   (4bytes), short  (2bytes), long (8bytes) , byte (8bits = 1byte), 
+										float (4bytes), double (8bytes)
+										char  (2bytes)
+										bool  (true/false)
+			2. Non-Primitive Data-Type: 
+			
+			
+			
+Task:  (on notepad)
+1. Create Mini Calculator (Three number Operations)
+2. Find out Area of Rectangle , area of circle, area of tringle, area of square
