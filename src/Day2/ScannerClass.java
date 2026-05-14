@@ -1,61 +1,61 @@
 package Day2;
 import java.util.Scanner;
 
-public class scanner_class {
+public class ScannerClass {
 
 	public static void main(String args[]) {
 		Scanner s= new Scanner(System.in);
 		
-		System.out.println("Name: ");
+		System.out.print("Name: ");
 		String name= s.next();
 		
-		System.out.println("Age: ");
+		System.out.print("Age: ");
 		int age= s.nextInt();
 		
-		System.out.println("Date of Birth (DD/YY/MM): ");
+		System.out.print("Date of Birth (DD/YY/MM): ");
 		String dob= s.next();
 		
-		System.out.println("Mobile Number: ");
+		System.out.print("Mobile Number: ");
 		int mob= s.nextInt();
 		
-		System.out.println("E-mail: ");
+		System.out.print("E-mail: ");
 		String email= s.next();
 		
-		System.out.println("Adhar Card Number: ");
+		System.out.print("Adhar Card Number: ");
 		int adhar= s.nextInt();
+		s.nextLine();
 		
 		
-		System.out.print("\nEducation Details");
+		System.out.println("\nEducation Details");
 		
 		
 		System.out.print("Education: ");
 		String edu= s.nextLine();
 		
-		System.out.println("Collage Name: ");
+		System.out.print("Collage Name: ");
 		String college= s.nextLine();
 		
-		System.out.println("University: ");
+		System.out.print("University: ");
 		String uni= s.nextLine();
 		
-		System.out.println("CGPA: ");
+		System.out.print("CGPA: ");
 		Float cgpa= s.nextFloat();
+		s.nextLine();
 		
 		System.out.println("\nBank Account Details: ");
 		
-		System.out.println("Bank Name: ");
+		System.out.print("Bank Name: ");
 		String bank= s.nextLine();
 		
-		System.out.println("Bank Branch: ");
+		System.out.print("Bank Branch: ");
 		String branch= s.nextLine();
 		
-		System.out.println("Account Number: ");
+		System.out.print("Account Number: ");
 		int acc= s.nextInt();
 		
-		System.out.println("IFSC Code: ");
+		System.out.print("IFSC Code: ");
 		String ifsc = s.next();
 		
-		
-	
 		
 		System.out.println("\n\nReview of Registration Form: \n");
 		
@@ -67,7 +67,7 @@ public class scanner_class {
 		System.out.println("E-mail: "+ email);
 		System.out.println("Adhar Card Number: "+ adhar);
 		
-		System.out.println("\n Education Details");
+		System.out.println("\nEducation Details");
 		System.out.println("Education: "+ edu);
 		System.out.println("Collage Name: "+ college);		
 		System.out.println("University: "+ uni);

@@ -76,7 +76,8 @@
 			2. Non-Primitive Data-Type: 
 			
 			
-			
-Task:  (on notepad)
-1. Create Mini Calculator (Three number Operations)
-2. Find out Area of Rectangle , area of circle, area of tringle, area of square
+** Conditional Statements **
+	-> 1. if else		2. else-if		3.Nested if 	4. Switch -> ex. Payment options if upi/credit/debit/cod then case 1/2/3/4 default:Payment Failed 
+	-> Examples: if student has more than 40% then only student is pass
+	
+	

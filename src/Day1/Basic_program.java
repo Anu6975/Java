@@ -1,6 +1,6 @@
 package Day1;
 
-public class basic_program {
+public class Basic_program {
 
 	public static void main(String[] args) {
 		
