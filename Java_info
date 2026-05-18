@@ -72,7 +72,7 @@
 			1. Primitive Data-Type: 	int   (4bytes), short  (2bytes), long (8bytes) , byte (8bits = 1byte), 
 										float (4bytes), double (8bytes)
 										char  (2bytes)
-										bool  (true/false)
+										boolean  (true/false)
 			2. Non-Primitive Data-Type: 
 			
 			
@@ -80,4 +80,61 @@
 	-> 1. if else		2. else-if		3.Nested if 	4. Switch -> ex. Payment options if upi/credit/debit/cod then case 1/2/3/4 default:Payment Failed 
 	-> Examples: if student has more than 40% then only student is pass
 	
+
+** Looping Statements **
+
+	1. While -> used when number of iterations are not fixed or not known
+			 -> it is called as entry control loop becuase it checks the condition at the beginning of the while loop
+			 -> syntax: //initialization
+			 			while(condition)
+			 			{
+			 				//code
+			 				increment/decrement;
+			 			}
+
+	2. Do-While -> used when loop should execute at least one time
+				-> it is called as the exit control loop because it checks the condition at the end
+				-> even if the condition is false do-while performs the statement inside block atleast once
+				-> Syntax: do
+							{
+								//code
+								increment/decrement;
+							}while(condition);
+							
+	3. for Loop -> used when number of iterations are known
+				-> syntax: for(initialization ; condition ; increment/decrement)
+							{
+								//code
+							}
+							
+
+** Array **
+
+	-> Array is collection of similar datatypes 
+	-> Contiguous Memory Allocation, allocates single block of memory.
+	-> Syntax: a. Declaration1: data_type array_name[] = {...};						// Decides on number of elements.
+				  Declaration2: data_type array_name[] = new data_type[size]; 		//Fixed Size	
+	-> uses indexing : position of array elements is called as array 
 	
+	Advantages:
+		-> Can store homogeneous datatypes
+		-> Easy for accessing, searching elements because of indexing.
+		-> Easy to modify, updation.
+		
+	
+	Disadvantages:
+		-> Can't Store Heterogeneous Datatypes
+		-> Fixed in Size.
+		-> slow for insertion and deletion.
+		
+	Types of Arrays:
+		-> 1. Single Dimensional Array - represents in single square brackets
+		-> 2. Two Dimensional Array    - represents using 2 square brackets : [] []
+		-> 3. Multi-Dimensional Array
+				  
+** new** is used to create a new object in java		
+
+** Task: Why Array Start from 0th Index? 
+		 Legacy classes?
+		 Difference between jdk17 and jdk21**
+							
