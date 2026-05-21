@@ -1,3 +1,8 @@
+** Java Enterprises(Editions) **
+	-> J2SE / Java SE: Java Standard Edition (Core Java / Desktop Applications)
+	-> J2EE / Java EE: Java Enterprise Edition (Advance Java / Web & Enterprise)
+	-> J2ME / Java ME: Java Micro Edition (Mobile & Micro-devices)
+
 ** What is Java? **
 	-> Java is a object oriented language , developed by james gosling under sun microsystems in 1995. Its first version was released in 1996 - JDK 1.0.
 	-> Later the Java was taken over by Oracle.
@@ -131,10 +136,125 @@
 		-> 1. Single Dimensional Array - represents in single square brackets
 		-> 2. Two Dimensional Array    - represents using 2 square brackets : [] []
 		-> 3. Multi-Dimensional Array
+		
+
+** Strings **
+
+	-> String is the collection of characters
+	-> it is a Array of collection.
+	-> A collection of characters or an array of sequence.
+	-> Ex. (char ch[] = {'V', 'A', 'I', 'B', 'H', 'A', 'V'}).
+	
+	-> Object is the parent class of all pre-defined classes in Java. String is a class in Java, not a primitive datatype. 
+	-> It implements the CharSequence interface.
+
+	** Ways to Create/Declare a String **
+			-> 1. java.lang.String (Immutable)
+			-> 2. java.lang.StringBuilder (Mutable - introduced in Java 5 for async/single-threaded performance)
+			-> 3. java.lang.StringBuffer (Mutable - thread-safe/synchronized)
+			-> 4. java.util.StringTokenizer 
 				  
+
+** String Constant Pool (SCP / SLP) **
+	-> A special memory area within the Heap Area allocated to store String literals to ensure memory efficiency.
+
+
+** Memory Allocation Rules (Literal vs. Object) **
+		1. String Literal 
+		-> Ex. String name = "Ajay";  				// Object is created only in the SCP.
+
+	-> If the literal already exists in SCP, it reuses the reference instead of creating a duplicate object.
+	
+		2. Using the new Keyword 
+		-> String name = new String("Vaibhav"); 	//Creates two objects: one in the Heap area and one in the SCP area (if it doesn't already exist in SCP).
+
+	-> The reference variable points to the object in the Heap memory.
+
+** Why String Class is Final? **
+	-> Syntax: public final class String extends Object { 
+						//code 
+						}
+
+	-> Reason: Security, caching, and immutability.
+
+	-> By marking it as final, Java prevents Inheritance. 
+	-> No other custom class can extend the String class to create a Child Class and override its behavior or tamper with data manipulation.
+	
+	
+** JVM Architecture (Brief) **
+	-> 1. Class Loader:Responsible for loading .class files into memory. It contains sub-components:
+	-> 2. Memory Area :	  !. Heap Area  2. Stack Area  3. Method Area   4.    5.
+	-> 3. Loading:		  Bootstrap, Extension, and Application Class Loaders.
+	-> 4. Linking:		  Verification, Preparation, and Resolution.
+	-> 5. Initialization: Static variables are assigned their actual values.
+
+** Example of JVM's Memory String Object **
+	String name1 = new String("Mani");    // 2 Objects (1 Heap, 1 SCP)
+	String name2 = new String("Nutan");   // 2 Objects (1 Heap, 1 SCP)
+	String name3 = "Anuja";               // 1 Object (SCP)
+	String name4 = new String("Nutan");   // 1 Object (Heap only; "Nutan" already exists in SCP)
+	String name5 = "Ajay";                // 1 Object (SCP)
+	String name6 = "Nutan";               // 0 Objects (Reuses existing "Nutan" in SCP)
+	String name7 = new String("Ajay");    // 1 Object (Heap only; "Ajay" already exists in SCP)
+	String name8 = "Ajay";                // 0 Objects (Reuses existing "Ajay" in SCP)
+
+
+
+** String Immutability & SCP ** 
+	-> String creates "Immutable Objects" which means you cannot change the data or value once it is created.
+	-> Example- String name = "Welcome";
+ 				name.concat("FortuneCloud"); 	// Or name.concat("Students");
+				System.out.println(name);
+				Output = "Welcome" 
+	-> The original value does not change because a new unassigned object "WelcomeFortuneCloud" is created in SCP instead.
+	-> Why Immutability is important? 
+			- (The 3 Users / Facebook Form example)
+			- If multiple reference variables point to the same literal in SCP (e.g., City = "Pune"), 
+			- changing the value for one user would accidentally change it for all other users if Strings were mutable.
+
+** StringBuffer vs StringBuilder **
+	-> Both are used to create "Mutable Objects" (values can be changed directly in memory).
+	-> You cannot create them as direct literals (e.g., StringBuffer b1 = "Welcome"; is a Compile-Time Error). They must use the new keyword.
+	-> Example of Mutability:
+			- StringBuffer b1 = new StringBuffer("Welcome");
+			- b1.append("Students");
+			- System.out.println(b1);
+			- Output = "WelcomeStudents" 
+	-> Modifies the exact same object directly inside the Heap Area; SCP is not used here.
+
+
+** Object Comparison: == Operator vs .equals() Method ** 
+	1. == Operator: 
+		-> Compares the reference or memory addresses of the objects.
+		
+	2. .equals() Method in Object Class:
+		-> The original definition in the root Object class uses `return (this == obj);` 
+		-> which means it also checks memory address references by default.
+		
+	3. .equals() Method in String Class: 
+		-> The String class overrides this parent method to change its behavior 
+		-> so that it compares the actual character content instead of memory locations.
+		
+	4. StringBuffer / StringBuilder .equals(): 
+		-> They do not override the Object class .equals() method. 
+		-> Therefore, using .equals() on them still compares memory references, not content.
+
+
+ Differences Table: String vs StringBuffer vs StringBuilder 
+
+| Feature			| String						  	| StringBuffer 				 | StringBuilder 					|
+| ------------------|-----------------------------------|----------------------------|----------------------------------|
+| Mutability		| Immutable (Value cannot change) 	| Mutable (Value can change) | Mutable (Value can change) 		|
+| Since Version		| JDK 1.0 						  	| JDK 1.0 					 | JDK 1.5 							|
+| Memory Area		| SCP + Heap Area 				  	| Heap Area only 			 | Heap Area only 					|
+| Memory Usage		| Uses more memory-create new object| Uses less memory 			 | Uses less memory 				|
+| Synchronization	| Non-Synchronized 				  	| Synchronized (Thread-Safe) | Non-Synchronized (No Thread-Safe)|
+| Performance		| Fast, due to no Synchronization 	| Slow (due to thread locks) | Fastest (no synchronization) 	|
+
+ 
+ 
 ** new** is used to create a new object in java		
 
-** Task: Why Array Start from 0th Index? 
-		 Legacy classes?
+** Task: Legacy classes?
 		 Difference between jdk17 and jdk21**
 							
