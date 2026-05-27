@@ -1,17 +1,19 @@
-package Day8;
 
-class Copy_Constructor{
+package Day8;
+ 
+class Student
+{
 	 int sid;
 	 String sname;
 	
-	Copy_Constructor(int x, String y) {
-		
+	 Student(int x,String y) // Para Constructor	
+	 {
 		 sid = x;
 		 sname = y;
-	}
+	 }
 	
 	 // Copy Con
-	 Copy_Constructor(Copy_Constructor s) // s=s.sid=101,s.sname="Ravi"
+	 Student(Student s) // s=s.sid=101,s.sname="Ravi"
 	 {
 		  sid=s.sid;
 		  sname=s.sname;
@@ -23,21 +25,26 @@ class Copy_Constructor{
 		 System.out.println("Student name is: " + sname);
 	 }
 	
+	
 }
 
-
-public class copy_constructor {
+public class copy_constructor
+{
+ 
+	public static void main(String[] args)
+	{
 	
-	public static void main(String [] ar) {
-		Copy_Constructor c = new Copy_Constructor(20, 'Anuja');
+		Student s1=new Student(101,"Ravi"); //Parameterized Constructor s1.sid=101,s1.sname="Ravi"
+		s1.display();
 		
-		C s2=new Student(s1); // s1.sid,s1.sname; 101 and Ravi
+		
+		Student s2=new Student(s1); // s1.sid,s1.sname; 101 and Ravi
 		s2.display();
 		
 		Student s3=new Student(s2); // Copy Constr
 		s3.display();
-		
-	
+ 
+ 
 	}
-
+ 
 }
