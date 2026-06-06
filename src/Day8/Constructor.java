@@ -1,7 +1,5 @@
 package Day8;
 
-import java.util.Scanner;
-
 class Calc{
 	int num1, num2;
 	
@@ -30,13 +28,10 @@ class Calc{
 	void mul() {
 		System.out.println("Multiplication: "+ num1*num2);
 	}
-	
-	
 }
 
 
 public class Constructor {
-	
 	
 	public static void main(String[] a) {
 		Calc c= new Calc();
@@ -45,7 +40,5 @@ public class Constructor {
 		c.sub();
 		c.mul();
 		c.div();
-		
 	}
-
 }
