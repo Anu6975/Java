@@ -5,13 +5,12 @@ class Calc{
 	
 	Calc(){
 		num1=25;
-		num2=5;
+		num2=2;
 		}
 	
 	void addition() {
-		int a=23;
-		int b=23;
-		System.out.println(a+b);
+		
+		System.out.println(num1 +num2);
 	}
 	void add() {
 		System.out.println("Addition: "+ (num1+num2));

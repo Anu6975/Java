@@ -76,7 +76,7 @@ class Inheritance {
 		
 		
 		System.out.println("\n\n");
-		//Heirarichal Inheritance
+		// Hierarchical Inheritance
 		
 		student2 s2 = new student2();
 		
