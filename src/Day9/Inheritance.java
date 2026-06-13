@@ -32,7 +32,7 @@ class exam extends students{
 }
 
 
-// 3. Heirarichal Inheritance - student2 is also inhering properties of college class creating 2 derived classes of 1 college base class
+// 3. Hierarchical Inheritance - student2 is also inhering properties of college class creating 2 derived classes of 1 college base class
 
 class student2 extends college{
 	void name() {
