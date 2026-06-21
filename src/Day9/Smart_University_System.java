@@ -1,7 +1,5 @@
 package Day9;
 
-import java.lang.invoke.StringConcatFactory;
-
 class person{
 	int id;
 	String name;

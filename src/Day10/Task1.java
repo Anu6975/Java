@@ -1,7 +1,11 @@
 package Day10;
 
+import java.security.DrbgParameters.NextBytes;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import JavaPractical.Day3.char_vowel;
+
 import java.util.Iterator;
 
 
@@ -27,6 +31,8 @@ public class Task1 {
 			System.out.print(it.next()+" ");
 		}
 		
+//		Task1.compare(fruit);
+		
 /*		System.out.println("\n\n-----------1. Printing fruits whose (length > 5)-------------");
 		Task1.lengthGreaterFive(fruit);
 		
@@ -40,12 +46,100 @@ public class Task1 {
 		Task1.fruitSearch(fruit);
 		
 		System.out.println("\n\n-----------5. Remove fruits whose (length < 5)-------------");
-		Task1.removeFruit_Length(fruit);*/
+		Task1.removeFruit_Length(fruit);
 		
 		System.out.println("\n\n-----------6. Removing a specific fruit-------------");
 		Task1.remove_SpecificFruit(fruit);
+		
+		System.out.println("\n\n-----------7. Removing fruits that Starts with Vowel-------------");
+		Task1.remove_Vowel(fruit); 
+		
+		System.out.println("\n\n-----------8. Counting Occurrences of Fruits-------------");
+		Task1.count_occurrences(fruit); */
+		
+		
+		System.out.println("\n\n-----------9. Printing Duplicate Fruits-------------");
+		Task1.duplicate_fruits(fruit); 
+		
+//		System.out.println("\n\n-----------10. Printing Longest FruitName-------------");
+//		Task1.Longest_FruitName(fruit);
+		
+	}
+	
+	static void Longest_FruitName(ArrayList<String> fruits) {
+		Iterator<String> iterator = fruits.iterator();
+		int max=0;
+		String maxElement=null;
+		while(iterator.hasNext()) {
+			String s = iterator.next();
+			
+			if(s.length()>max) {
+				max=s.length();
+				maxElement=s;
+			}
+		}
+		
+		System.out.println("Longest Element with Length "+max+" is "+maxElement);
+	}
+	
+	static void duplicate_fruits(ArrayList<String> fruits) {
+		
+		ArrayList<String> seenArrayList = new ArrayList<>();
+		ArrayList<String> duplicate = new ArrayList<>();
+		
+		Iterator<String> iterator = fruits.iterator();
+		while(iterator.hasNext()) {
+			String s = iterator.next();
+			
+			if(seenArrayList.contains(s)== false) {
+				seenArrayList.add(s);
+			}
+			else if(!duplicate.contains(s)) {
+				duplicate.add(s);
+			}
+		}
+		
+		System.out.println("Duplicate Elements: "+duplicate);
 
-
+		/* Printing Removed Duplicate Element */
+		System.out.println("Unique Elements: "+seenArrayList);
+	}
+	
+	static void count_occurrences(ArrayList<String> fruits) {
+		Iterator<String> it = fruits.iterator();
+		
+		System.out.print("Enter a Fruit Search Occurrence: ");
+		String occur= sc.next();
+		int count=0;
+		while(it.hasNext()) {
+			String s = it.next();
+			if(s.equals(occur)) {
+				count++;
+			}
+		}
+		
+		System.out.println("Occurrence: "+count);
+	}
+	
+	static void remove_Vowel(ArrayList<String> fruits) {
+		Iterator<String> it = fruits.iterator();
+		while(it.hasNext()) {
+			String s = it.next();
+			char vowel_check = s.charAt(0);
+			if(vowel_check=='a' || vowel_check=='e' || vowel_check=='i' || vowel_check=='o' || vowel_check=='u' || 
+					vowel_check=='A' || vowel_check=='E' || vowel_check=='I' || vowel_check=='O' || vowel_check=='U' ) {
+				it.remove();
+			}
+		}
+		
+		System.out.println("Updated List: ");
+		it=fruits.iterator();
+		while (it.hasNext()) {
+			System.out.print(it.next()+" ");
+			
+		}
+		
+//		System.out.println("\n"+fruits);		//Fruits Array List gets update as well
 	}
 	
 	static void remove_SpecificFruit(ArrayList<String> fruits) {
@@ -71,10 +165,17 @@ public class Task1 {
 			
 		}
 		if(flag==0) {
-			System.out.println("Invalid Input!");
+			System.out.println("Fruit Not Found!");
 		}
 		
 	}
+	
+	static void compare(ArrayList<String> fruits) {
+		Iterator<String> it= fruits.iterator(); 			
+		
+		System.out.println(it.equals(fruits));				//Comparing Iterator and Fruits objects 
+	}
+	
 	
 	static void removeFruit_Length(ArrayList<String> fruits) {
 		Iterator<String> it = fruits.iterator();
@@ -113,6 +214,7 @@ public class Task1 {
 		Iterator<String> it = fruits.iterator();
 		int count=0;
 		while (it.hasNext()) {
+			it.next();
 			count++;
 		}
 		System.out.println(count);
