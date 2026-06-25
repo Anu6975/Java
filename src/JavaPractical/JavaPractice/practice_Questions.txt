@@ -1,0 +1,2 @@
+reverse - degits , paindrome
+sum of digits;
