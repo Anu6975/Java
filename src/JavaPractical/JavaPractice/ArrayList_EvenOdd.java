@@ -1,5 +1,6 @@
-// List of Using ArrayList and Iterator Even_Odd Numbers
+// List of Even_Odd Numbers Using ArrayList and Iterator
 
+package JavaPractical.JavaPractice;
 import java.util.*;
 
 class ArrayList_EvenOdd{

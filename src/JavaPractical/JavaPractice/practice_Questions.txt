@@ -1,2 +1,30 @@
-reverse - degits , paindrome
-sum of digits;
+** Numbers **
+
+	1. Number Count in a Digit
+	2. Digit Reverse
+	3. Digit Palindrome
+	4. Digit Sum 
+
+** Array Programs **
+
+	1. Array Reverse Elements
+
+
+** Strings **
+
+	1. Find the first non-repeating character in a string.
+	2. Find the first repeating character.
+	3. Count frequency of every character without using built-in frequency methods.
+	4. Check whether two strings are anagrams.
+	5. Remove duplicate characters while preserving order.
+	6. Find the longest word in a sentence.
+	7. Compress a string.	Example: aaabbccccd -> a3b2c4d1								 
+	8. Reverse the words of a sentence without reversing characters.	I Love Java -> Java Love I
+	9. Check if one string is a rotation of another.
+	10. Find the longest substring without repeating characters.
+
+
+** Collection FrameWork **
+
+A. ArrayList
+	1. ArrayList Even Odd Check, and separate List;
