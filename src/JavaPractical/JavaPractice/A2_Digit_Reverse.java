@@ -1,7 +1,7 @@
 package JavaPractical.JavaPractice;
 import java.util.Scanner;
 
-public class Digit_Reverse {
+public class A2_Digit_Reverse {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -22,5 +22,4 @@ public class Digit_Reverse {
 		
 		System.out.println("Reversed Digit: "+ reverse);
 	}
-
 }

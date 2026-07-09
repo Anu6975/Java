@@ -1,9 +1,9 @@
-//Print Array Elemnts in Reverse
+//Print Array Elements in Reverse
 
 package JavaPractical.JavaPractice;
 import java.util.*;
 
-class Array_Reverse{
+class B1_Array_Reverse{
 	public static void main(String [] ar) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Array Element Size: ");

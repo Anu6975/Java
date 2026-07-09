@@ -3,7 +3,7 @@
 package JavaPractical.JavaPractice;
 import java.util.*;
 
-class ArrayList_EvenOdd{
+class D1_ArrayList_EvenOdd{
 	public static void main(String[] ar){
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Array Element Size: ");

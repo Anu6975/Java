@@ -1,13 +1,12 @@
 package JavaPractical.JavaPractice;
 import java.util.Scanner;
 
-public class String_FirstNoRepeatChar {
+public class C1_String_FirstNonRepeatChar {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Enter a String: ");
 		String str = sc.nextLine().toLowerCase();
-		int count=0;
 		
 //		int count=0, count2=0, found=0;;
 //		
@@ -36,9 +35,8 @@ public class String_FirstNoRepeatChar {
 //			System.out.print("No Non-Repeated Characters!");
 		
 		
-		
 		for(int i=0; i<str.length(); i++) {
-			count=0;
+			int count=0;
 			for(int j=0; j<str.length(); j++) {
 				 if(str.charAt(i)==str.charAt(j))
 				        count++;

@@ -1,10 +1,10 @@
 package JavaPractical.JavaPractice;
 import java.util.Scanner;
 
-public class Digit_Palindrome {
+public class A3_Digit_Palindrome {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a Digit: ");
+		System.out.print("Enter a Digit: ");
 		int digit= sc.nextInt();
 		int temp=digit;
 		

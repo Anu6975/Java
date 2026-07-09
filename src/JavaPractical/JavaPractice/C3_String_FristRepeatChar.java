@@ -1,9 +1,7 @@
 package JavaPractical.JavaPractice;
-
 import java.util.Scanner;
 
-public class String_FristRepeatChar {
-
+public class C3_String_FristRepeatChar {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -16,7 +14,7 @@ public class String_FristRepeatChar {
 		for(int i=0; i<n; i++) {
 			for(int j=i+1; j<n; j++) {
 				if(str.charAt(i)==str.charAt(j)) {
-					System.out.println("First Repeated char: "+ str.charAt(i));
+					System.out.println("First Repeated Character: "+ str.charAt(i));
 					found = true;
 					return;
 				}
@@ -25,5 +23,4 @@ public class String_FristRepeatChar {
 		if(!found)
 			System.out.println("No Repeated Character");
 	}
-
 }

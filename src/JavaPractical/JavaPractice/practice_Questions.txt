@@ -13,8 +13,8 @@
 ** Strings **
 
 	1. Find the first non-repeating character in a string.
-	2. Find the first repeating character.
-	3. Count frequency of every character without using built-in frequency methods.
+	2. Count frequency of every character without using built-in frequency methods. 
+	3. Find the first repeating character.
 	4. Check whether two strings are anagrams.
 	5. Remove duplicate characters while preserving order.
 	6. Find the longest word in a sentence.
